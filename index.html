@@ -26,9 +26,9 @@
 <meta property="og:video:type" content="video/mp4">
 <meta property="og:video:width" content="1280">
 <meta property="og:video:height" content="720">
-<link href="https://unpkg.com/video.js/dist/video-js.css" rel="stylesheet">
+<!-- <link href="https://unpkg.com/video.js/dist/video-js.css" rel="stylesheet">
 <script src="https://unpkg.com/video.js/dist/video.js"></script>
-<script src="https://unpkg.com/videojs-contrib-hls/dist/videojs-contrib-hls.js"></script>
+<script src="https://unpkg.com/videojs-contrib-hls/dist/videojs-contrib-hls.js"></script> -->
   
   <script type='text/javascript' src="//wurfl.io/wurfl.js"></script>
 </head>
@@ -39,17 +39,25 @@
     </head>
     <body>
       
-       <video id="my_video_1" class="video-js vjs-fluid vjs-default-skin" controls preload="auto"
+       <video id="my_video_1" class="css-change" controls preload="auto"
       data-setup='{}'>
         <source src="https://a9dce1de809e.us-east-1.playback.live-video.net/api/video/v1/us-east-1.519815536108.channel.29VgNIQbUrD5.m3u8" type="application/x-mpegURL">
       </video>
       
+      <style>
        
+        .css-change {
+    height:100%;
+    width:100%;
+    overflow:hidden;
+} 
+     
+      </style>
   
      
       
     <script>
-    var player = videojs('my_video_1');
+    var player = videojs('Main Stream');
     player.play();
     </script>
 
@@ -67,19 +75,9 @@
 
 
 
-<video id='hls-example'  class="video-js vjs-default-skin" width="100%" height="100%" controls>
-<source type="application/x-mpegURL" src="https://a9dce1de809e.us-east-1.playback.live-video.net/api/video/v1/us-east-1.519815536108.channel.29VgNIQbUrD5.m3u8
-        <video width="100%" height="100%" controls>
-    <source src="https://a9dce1de809e.us-east-1.playback.live-video.net/api/video/v1/us-east-1.519815536108.channel.29VgNIQbUrD5.m3u8" type="application/x-mpegURL">
-</video>
 <script src="https://vjs.zencdn.net/ie8/ie8-version/videojs-ie8.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/videojs-contrib-hls/5.14.1/videojs-contrib-hls.js"></script>
 <script src="https://vjs.zencdn.net/7.2.3/video.js"></script>
-
-<script>
-var player = videojs('hls-example');
-player.play();
-</script>
 
     </body>
 </html>
